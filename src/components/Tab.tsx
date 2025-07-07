@@ -38,7 +38,7 @@ const Tab:FC<TabProps> = ({tab, active, onTogglePin}) => {
               'box-content h-4 min-w-4 group relative flex items-center text-sm leading-none hover:bg-(-hover) bg-background px-5 py-4 text-(--secondary-foreground) font-medium border-t-(--border)',
               active ? 'bg-secondary text-(--primary) border-t-3 border-t-(--border-secondary)' : '',
               tab.pinned
-                ? 'w-4' : '',
+                ? 'w-3' : '',
             )}
             {...attributes}
             {...(tab.pinned ? {} : listeners)}
