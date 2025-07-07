@@ -14,7 +14,9 @@ const TabsLayout = ({ children }: Props) => {
 
   return (
     <div className='flex flex-col h-full'>
-      <NavigationTabs initTabs={tabsData} persistOrder/>
+      <div className="w-full md:max-w-[96vw]">
+        <NavigationTabs initTabs={tabsData} persistOrder/>
+      </div>
       <section className='p-5 box-border grow'>
         {children}
       </section>

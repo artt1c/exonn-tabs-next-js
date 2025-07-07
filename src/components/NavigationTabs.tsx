@@ -131,10 +131,10 @@ const NavigationTabs:FC<TabsDataProps> = ({initTabs, persistOrder = false}) => {
             }}
           >
             {/*TABS LIST*/}
-            <TabsList className="h-auto flex max-w-dvw md:max-w-full overflow-hidden rounded-md bg-muted p-1">
+            <TabsList className="h-auto flex max-w-full overflow-x-auto whitespace-nowrap bg-muted p-1">
               {
                 sortedTabs.map(tab => (
-                  <Tab key={tab.id} tab={tab} onTogglePin={() => togglePin(tab.id)}/>
+                  <Tab key={tab.id} tab={tab} active={tab.id === activeTab} onTogglePin={() => togglePin(tab.id)}/>
                 ))
               }
             </TabsList>
@@ -142,6 +142,7 @@ const NavigationTabs:FC<TabsDataProps> = ({initTabs, persistOrder = false}) => {
 
         </SortableContext>
       </DndContext>
+
     </nav>
   );
 };
